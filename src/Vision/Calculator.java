@@ -3,13 +3,29 @@ package Vision;
 import javax.swing.*;
 import java.awt.*;
 
-public class Button extends JButton {
-    public Button(String label, Color color){
-        setText(label);
-        setBackground(color);
-        setForeground(Color.WHITE);
-        setOpaque(true);
-        setFont(new Font("sans serif",Font.PLAIN,25));
-        setBorder(BorderFactory.createLineBorder(Color.BLACK));
+public class Calculator extends JFrame {
+
+    public Calculator(){
+        organizeLayout();
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(232,322);
+        setLocationRelativeTo(null);
+    }
+
+    private void organizeLayout() {
+        setLayout(new BorderLayout());
+
+        Display display = new Display();
+        display.setPreferredSize(new Dimension(233,60));
+        add(display,BorderLayout.NORTH);
+
+        Keyboard keyboard = new Keyboard();
+        add(keyboard,BorderLayout.CENTER);
+
+
+    }
+    public static void main(String[] args) {
+        new Calculator();
     }
 }
