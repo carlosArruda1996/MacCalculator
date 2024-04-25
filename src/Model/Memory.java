@@ -1,5 +1,7 @@
 package Model;
 
+import Vision.Display;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,7 @@ public class Memory {
     private String currentText = "";
     private String bufferText = "";
 
-    private final List<ObserverMemory> observers = new ArrayList<>();
+    private final List<OberverMemory> observers = new ArrayList<>();
 
     private Memory(){
 
@@ -23,7 +25,7 @@ public class Memory {
         return instance;
     }
 
-    public void addObserver(ObserverMemory observer){
+    public void addObserver(Display observer){
         observers.add(observer);
     }
 

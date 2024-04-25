@@ -1,12 +1,12 @@
 package Vision;
 
 import Model.Memory;
-import Model.ObserverMemory;
+import Model.*;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class Display extends JPanel implements ObserverMemory {
+public class Display extends JPanel implements OberverMemory {
 
     private final JLabel label = new JLabel(Memory.getInstance().getCurrentText());
 
